@@ -96,7 +96,7 @@ class MainActivity : AppCompatActivity(), OnMovieItemClickListener {
             // crating an arraylist to store movies using the data class user
             movies = it.results as ArrayList<Result>
             // creating our adapter
-            val adapter = MovieListAdapter(movies, this)
+            val adapter = MovieListAdapter(this)
             adapter.setMovieList(it.results)
             // now adding the adapter to recyclerview
             binding.recyclerView.adapter = adapter

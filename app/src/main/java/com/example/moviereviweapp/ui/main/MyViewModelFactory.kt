@@ -6,9 +6,8 @@ import com.example.moviereviweapp.repository.MovieReviewRepository
 
 class MyViewModelFactory constructor(
     private val movieReviewRepository: MovieReviewRepository
-) :
-    ViewModelProvider.Factory {
-
+) : ViewModelProvider.Factory {
+    @Suppress("UNCHECKED_CAST")
     override fun <T : ViewModel> create(modelClass: Class<T>): T {
         return if (modelClass.isAssignableFrom(MainViewModel::class.java)) {
             MainViewModel(this.movieReviewRepository) as T

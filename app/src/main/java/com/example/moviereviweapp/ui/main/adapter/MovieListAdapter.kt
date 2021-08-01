@@ -9,7 +9,6 @@ import com.example.moviereviweapp.interfaces.OnMovieItemClickListener
 import com.example.moviereviweapp.model.Result
 
 class MovieListAdapter(
-    movies: ArrayList<Result>,
     private val onMovieItemClickListener: OnMovieItemClickListener
 ) :
     RecyclerView.Adapter<MyViewHolder>() {
