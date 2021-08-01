@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">moviereviweapp</string>
+    <string name="no_network_txt">No Internet Connection! Please check your network.Try again</string>
+    <string name="network_connectivity_txt">Network Connection establish.</string>
+    <string name="network_error_message">Network error! Can\'t get latest movie reviews posts.</string>
+</resources>
