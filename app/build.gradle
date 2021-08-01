@@ -37,6 +37,10 @@ android {
         // for view binding:
         // viewBinding true
     }
+
+    dexOptions {
+        javaMaxHeapSize "4g"
+    }
 }
 
 dependencies {
