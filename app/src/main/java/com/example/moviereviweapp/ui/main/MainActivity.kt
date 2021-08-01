@@ -1,7 +1,9 @@
 package com.example.moviereviweapp.ui.main
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.View
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -99,6 +101,18 @@ class MainActivity : AppCompatActivity(), OnMovieItemClickListener {
             // now adding the adapter to recyclerview
             binding.recyclerView.adapter = adapter
         })
+
+        mainViewModel.errorMessage.observe(this,
+            {
+                Log.e("errorMessage", "errorMessage: $it")
+                binding.progressBar.visibility = View.GONE
+                Toast.makeText(
+                    this,
+                    "Opps! Something wrong in network server set up.",
+                    Toast.LENGTH_SHORT
+                ).show()
+
+            })
         mainViewModel.getMovieData()
         binding.networkStatusLayout.visibility = View.GONE
 
